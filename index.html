@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bearcode</title>
+  <style>
+    :root {
+      --green: #50f8b6;
+      --dark: #161616;
+      --light: #f0f0f0;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--dark);
+      color: var(--light);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      background-color: #1c1c1c;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: var(--green);
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: var(--green);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: #222;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--green);
+    }
+
+    .card p {
+      color: #aaa;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      margin: 0.5rem 0;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-button {
+      background-color: var(--green);
+      color: #000;
+      padding: 12px 18px;
+      border: none;
+      border-radius: 50px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      transition: background 0.3s;
+    }
+
+    .whatsapp-number {
+      position: absolute;
+      bottom: 130%;
+      right: 0;
+      background-color: #fff;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      white-space: nowrap;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .whatsapp-container:hover .whatsapp-number {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #111;
+      color: #666;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .whatsapp-button {
+        padding: 10px 16px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bearcode</h1>
+    <p>Design. Code. Inspire. Make your brand roar.</p>
+  </header>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>Bearcode is a creative studio blending graphic design and web development to bring bold, modern, and functional digital experiences to life.</p>
+  </section>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Graphic Design</h3>
+        <p>Posters, branding, logos, and creative visuals that stand out across platforms.</p>
+      </div>
+      <div class="card">
+        <h3>Web Development</h3>
+        <p>Static and responsive websites built with modern, clean code and stunning aesthetics.</p>
+      </div>
+      <div class="card">
+        <h3>Social Media Kits</h3>
+        <p>Templates and assets tailored for Instagram, Facebook, and Telegram bots.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="card">
+        <h3>Faisa Link</h3>
+        <p>A quick-access mini page for small businesses to receive payments and share promotions.</p>
+      </div>
+      <div class="card">
+        <h3>Telegram Bots</h3>
+        <p>Custom bots that automate tasks, manage bookings, and connect with your audience.</p>
+      </div>
+      <div class="card">
+        <h3>Instagram Highlights</h3>
+        <p>Designed for impact: check out Bearcode’s showcase via our Instagram.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:hi@bearcode.me" style="color: var(--green);">hi@bearcode.me</a></p>
+    <p>Instagram: <a href="https://instagram.com/bearcode.me" target="_blank" style="color: var(--green);">@bearcode.me</a></p>
+  </section>
+
+  <!-- WhatsApp Hover Button -->
+  <div class="whatsapp-container">
+    <a href="https://wa.me/9607123456" target="_blank">
+      <button class="whatsapp-button">💬 WhatsApp</button>
+    </a>
+    <div class="whatsapp-number">+960 712-3456</div>
+  </div>
+
+  <footer>
+    &copy; 2025 Bearcode. All rights reserved.
+  </footer>
+
+</body>
+</html>
